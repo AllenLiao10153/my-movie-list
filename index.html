@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Movie List</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="favorite.html">Favorite</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-3">
+
+    <div class="row mb-4">
+      <!-- Search Bar -->
+      <div class="col">
+        <form class="row row-cols-lg-auto g-3 align-items-center" id="search-form">
+          <div class="col-12">
+            <label class="visually-hidden" for="inlineFormInputGroupUsername">Search Keyword</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="search-input" placeholder="Keyword...">
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary" id="search-summit">Search</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Display Mode -->
+      <div class="col d-flex justify-content-end align-items-center" id="display-mode">
+        <i class="fa fa-th fs-4 mx-3" aria-hidden="true" id="display-mode-card"></i>
+        <i class="fa fa-bars fs-4" aria-hidden="true" id="display-mode-list"></i>
+      </div>
+    </div>
+
+    <!-- Data Panel -->
+    <div class="row gy-3" id="data-panel">
+
+      <!-- render movie info -->
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="movie-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="movie-modal-title"></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row" id="movie-modal-info">
+              <div class="col-sm-8">
+                <img src="" class="img-fluid" id="movie-modal-image" alt="movie poster">
+              </div>
+              <div class="col-sm-4">
+                <p><em>release date:</em><em id="movie-modal-date"></em></p>
+                <p id="movie-modal-description"></p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Pagination -->
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center mt-3" id="paginator">
+
+      <!-- render paginator -->
+
+    </ul>
+  </nav>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="https://kit.fontawesome.com/e1f80b9e47.js" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
